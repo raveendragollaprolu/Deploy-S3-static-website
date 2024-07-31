@@ -42,6 +42,7 @@ Click "Add files" and select your static website files (e.g., index.html, error.
 Click "Upload".
 
 http://YOUR_BUCKET_NAME.s3-website-REGION.amazonaws.com
+
 Example: How to Check and Configure Settings
 Enable Static Website Hosting:
 
