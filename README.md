@@ -27,15 +27,36 @@ Click on "Bucket Policy".
 
 Add the following bucket policy to allow public read access:
 
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "PublicReadGetObject",
-            "Effect": "Allow",
-            "Principal": "*",
-            "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::my-website-bucket/*"
-        }
-    ]
-}
+Check this JSON code file in Backet-policy-file.
+
+
+Replace my-website-bucket with the name of your bucket.
+
+Save the policy.
+
+Step 3: Upload Your Static Website to S3
+Go to the "Objects" tab of your bucket.
+Click on "Upload".
+Add files:
+Click "Add files" and select your static website files (e.g., index.html, error.html, CSS, JS, etc.).
+Click "Upload".
+
+http://YOUR_BUCKET_NAME.s3-website-REGION.amazonaws.com
+Example: How to Check and Configure Settings
+Enable Static Website Hosting:
+
+Go to your S3 bucket in the AWS console.
+Navigate to "Properties".
+Click "Edit" under "Static website hosting".
+Enable it and set index.html as the index document.
+Set Bucket Policy:
+
+Go to the "Permissions" tab.
+Click "Bucket Policy" and paste the policy provided above, replacing YOUR_BUCKET_NAME with your bucket name.
+Save the changes.
+Check File Permissions:
+
+Navigate to the "Objects" tab.
+Select index.html and ensure it is publicly accessible.
+If you still face issues, double-check the file paths and names, as any discrepancies can lead to a 404 error.
+
